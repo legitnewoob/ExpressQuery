@@ -1,0 +1,18 @@
+.login{
+    height:35vh;
+    width: 25vw;
+    background-color: aqua;
+    position: relative;
+    margin: 32.5vh 42.5vw;
+    /* top:150px; */
+    border-radius: 25px;
+    /* width: 100%; */
+
+    
+
+}
+.col-sm-10{
+     left: 100px;
+
+
+}

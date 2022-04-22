@@ -1,0 +1,69 @@
+
+#pie-1{
+    position: relative;
+    height: 300px;
+    width: 500px;
+    /* background-color: tomato; */
+    border-style: solid;
+    border-color: tomato;
+
+}
+#pie-2{
+    position: relative;
+    height: 300px;
+    width: 500px;
+    border-style: solid;
+    border-color: tomato;
+    left: 510px;
+    bottom: 305px;
+
+}
+#chart-1{
+    position: relative;
+    height: 300px;
+    width: 500px;
+    border-style: solid;
+    border-color: tomato;
+    left: 1020px;
+    bottom: 610px;
+}
+#chart-2 {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    border-style: solid;
+    border-color: tomato;
+    bottom: 590px;
+}
+#stats1 {
+    position: relative;
+    height: 300px;
+    width: 500px;
+    border-style: solid;
+    border-color: tomato;
+    bottom: 895px;
+    left: 1020px;
+}
+#stats2 {
+    position: relative;
+    height: 400px;
+    width: 500px;
+    border-style: solid;
+    border-color: tomato;
+    bottom: 1199px;
+    left: 510px;
+}
+/* 
+#parent{
+    display: flex;
+} */
+#mychart{
+
+    position: relative;
+    top: 20px;
+}
+#title {
+    left: 670px;
+    position: relative;
+    font-size: xx-large;
+}

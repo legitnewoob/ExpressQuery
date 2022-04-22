@@ -1,0 +1,132 @@
+#top{
+   height:50px;
+   width:100%;
+
+}
+#form{
+align-items: center;
+border-color: black;
+}
+#form-show-reg a {
+    text-decoration: none;
+    color: #cc6600;
+    font-size: 1.8vw;
+  }
+  #form-show-reg a:hover {
+     text-decoration: none;
+     color: #804000;
+  }
+  #name-reg {
+    font-family: Copperplate Gothic Bold;
+    font-weight: bold;
+    color: #339966;
+    text-shadow: 5px 5px 95px black;
+    padding-top: 0px;
+    padding-left: 22px;
+  }
+  #register-bar {
+    /* height: 5.6vh; */
+    background-color: black;
+    padding-top: 1.8vh;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 25px 25px 0px 0px;
+  }
+  #right-option-reg {
+    display: block;
+    float: right;
+    margin-top: -91.4vh;
+    margin-right: 0.11vw;
+  }
+  #open-eye-reg {
+    width: 2.65vw;
+    height: 4.15vh;
+  }
+  #slash-eye-reg {
+    padding-top: 0.5vh;
+    width: 2.5vw;
+    height: 3.24vh;
+    display: none;
+  }
+  #outer-reg {
+    margin-top: 6.5vh;
+    margin-bottom: 6.5vh;
+    margin-left: 37.8vw;
+    height: 77vh;
+    width: 25vw;
+    background-color: white;
+    align-content: center;
+    /* box-shadow: 3.5px 3.5px 90px Black; */
+    border-radius: 20px;
+    border-style: block black;
+    border-color: black;
+    text-align: center;
+  }
+  #outer-reg input {
+    width: 20vw;
+    height: 3.5vh;
+    margin-top: -1.5vh;
+    border: 3.5px solid black;
+    font-family: Arial black;
+    font-size: 1.2vw;
+  }
+
+  .nottoselect{
+      padding: 3px;
+  }
+  #button1-reg {
+    width: 8.5vw;
+    height: 5.2vh;
+    background-color: #cc6600;
+    border: 3px #cc6600;
+    color: white;
+    cursor: pointer;
+  }
+  #button1-reg:hover {
+    background-color: #804000;
+    transition: all 0.2s;
+  }
+  #button2-reg {
+    width: 17vw;
+    height: 7.5vh;
+    background-color: #ffffff;
+    border-radius: 24px;
+    margin-top: 14px;
+    border: 2px #ffffff;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  .quick-link-reg {
+    float: right;
+    margin-top: -1.55vh;
+    margin-right: 1.4vw;
+  }
+  #loading-anim-reg {
+    display: block;
+    width: 22vw;
+    height: 33vh;
+    margin-left: 38.7vw;
+    margin-top: 9vh;
+  }
+  #loading-text-reg {
+    font-size: 26px;
+    display: block;
+    margin-left: 32.5vw;
+    margin-top: -6vh;
+    user-select: none;
+  }
+
+  #form{
+      position: relative;
+      top: 30px;
+     
+     padding: 30px; 
+     border: 10px black;
+     border-style:solid;
+     padding:0px 0px;
+
+
+
+  }

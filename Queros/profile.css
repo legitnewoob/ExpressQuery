@@ -1,0 +1,30 @@
+.navbar container-fluid{
+
+    color: rgb(239, 180, 41);
+}
+
+.fill-ticket {
+    position: relative;
+    border-style: solid;
+    border-color: black;
+    height: 550px;
+    width: 600px;
+    left: 50px;
+    /* border-radius: 25px; */
+    display: block;
+    float: left;
+}
+#create-ticket{
+    position: relative;
+    text-align: center;
+
+}
+#my-tickets {
+    border-style: solid;
+    border-color: black;
+    height: 550px;
+    width: 600px;
+    float: right;
+    display: block;
+    margin-right: 50px;
+}
