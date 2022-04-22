@@ -1,0 +1,33 @@
+body {
+    background-color: green;
+    
+}
+
+.navbar container-fluid{
+    color: rgb(239, 180, 41);
+}
+
+textarea {
+    resize: none;
+}
+
+.fill-ticket {
+    position: relative;
+    height: 550px;
+    width: 600px;
+    left: 50px;
+    display: block;
+    float: left;
+}
+#create-ticket{
+    position: relative;
+    text-align: center;
+
+}
+#my-tickets {
+    height: 550px;
+    width: 600px;
+    float: right;
+    display: block;
+    margin-right: 50px;
+}
