@@ -20,11 +20,13 @@ textarea {
     float: left;
 }
 #create-ticket{
+    color: white;
     position: relative;
     text-align: center;
 
 }
 #my-tickets {
+    color: white;
     height: 550px;
     width: 600px;
     float: right;

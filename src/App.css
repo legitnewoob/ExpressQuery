@@ -66,7 +66,7 @@ body {
   border-radius: 50vw;
   outline: none;
 }
-#button1-reg {
+#button1-reg, #button-con {
   width: 8.5vw;
   height: 5.2vh;
   background-color: #cc6600;
@@ -74,7 +74,7 @@ body {
   color: white;
   cursor: pointer;
 }
-#button1-reg:hover {
+#button1-reg:hover, #button-con:hover {
   background-color: #804000;
   transition: all 0.2s;
 }
@@ -94,17 +94,6 @@ body {
   margin-top: -1.55vh;
   margin-right: 1.4vw;
 }
-#loading-anim-reg {
-  display: block;
-  width: 22vw;
-  height: 33vh;
-  margin-left: 38.7vw;
-  margin-top: 9vh;
-}
-#loading-text-reg {
-  font-size: 26px;
-  display: block;
-  margin-left: 32.5vw;
-  margin-top: -6vh;
-  user-select: none;
+#additional {
+  display: none;
 }

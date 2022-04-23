@@ -2,11 +2,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import {
-  getFirestore, doc, getDoc, setDoc, collection, addDoc
-} from "firebase/firestore";
+  getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField
+  } from 'firebase/firestore';
 
 import banner from "./banner.png";
 import './App.css';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDNeOvUfj55pVBtkN0gISAs_J62eYPQISY",
@@ -24,8 +25,29 @@ const db = getFirestore();
 
 function App() {
 
+  var uUID;
+
+  async function updateincloudfs(accountuid, newrole)
+  {
+    await updateDoc(doc(db, "accounts", accountuid), {
+      role: newrole
+    })
+    .then(() => {
+      window.location = "./dashboard-user";
+    })
+    .catch((error) => {
+      alert(error.code);
+    })
+  }
+
+  function getSelected() {
+    var selectElement = document.querySelector('#userrole');
+    var output = selectElement.value;
+    return output;
+}
+
 // Function to Pass Data to Firebase Firestore Database
-async function addtocloudfs(name, username, email, age, post, accountuid)
+async function addtocloudfs(name, username, email, age, accountuid)
 {
   await setDoc(doc(db, "accounts", accountuid), {
       name: name,
@@ -33,8 +55,13 @@ async function addtocloudfs(name, username, email, age, post, accountuid)
       email:email,
       age: age,
       queries: 0,
-      role: post
+      role: "pending"
   });
+}
+
+const opop = () => {
+  var nrole = getSelected(); 
+  updateincloudfs(uUID, nrole);
 }
 
   const button1List = (e) => {
@@ -67,11 +94,12 @@ async function addtocloudfs(name, username, email, age, post, accountuid)
         .then((userCredential) => {
           // Account Successfully Registered
           const user = userCredential.user;
-          console.log(user);
           sendEmailVerification(auth.currentUser)
           .then(() => {});
+          uUID=user.uid;
           addtocloudfs(name, username, email, age, user.uid);
-           window.location = "./dashboard";
+          document.getElementById("additional").style.display="block";
+          document.getElementById("already").style.display="none";
         })
         .catch((error) => {
           // Account Registration Failed
@@ -101,12 +129,22 @@ async function addtocloudfs(name, username, email, age, post, accountuid)
     }
 
   return (
+
+
     <div id="page-reg">
+
       <div id="form-show-reg">
+
         <div align="center" id="outer-reg">
+
           <div className="nottoselect" id="register-bar">Queros HelpDesk</div>
           <img src={banner} id="banner-img"></img>
+
+
+          <div id="already">
+
             <form align="center">
+              
                 <input type="text" placeholder="Your Name" style={{marginTop: "22px"}} id="user-name" spellCheck="false"/><br /><br />
                 <input type="text" placeholder="Your Username" id="user-username" spellCheck="false"/><br /><br />
                 <input type="text" placeholder="Your E-Mail ID" id="user-email" spellCheck="false"/><br /><br />
@@ -114,11 +152,36 @@ async function addtocloudfs(name, username, email, age, post, accountuid)
                 <input type="password" placeholder="Create Password" id="user-passcode-1"/><br /><br />
                 <input type="password" placeholder="Confirm Password" id="user-passcode-2"/><br /><br />
                 <p style={{paddingLeft: "3px"}} className="nottoselect">By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
+                
                 <button type="submit" className="nottoselect" id="button1-reg" onClick={button1List}>
                   <b style={{fontSize: "1.3vw"}}>Sign Up</b>
                 </button>
-                <br />
+
+              </form>
+
+          </div>
+
+          <div id="additional">
+          <br />
+            <form align="center">
+
+              <select className="form-select"  id="userrole">
+                <option value="">-- Select Position --</option>
+                <option value="">Software Engineer</option>
+                <option value="">Hardware Engineer</option>
+                <option value="">Technial Assistant</option>
+                <option value="">Technical Analyst</option>
+                <option value="">Data Scientist</option>
+              </select>
+            <br />
+
+              <button type="submit" id="button-con" onClick={opop}>
+                <b style={{fontSize: "1.3vw"}}>Continue</b>
+              </button>
             </form>
+
+          </div>
+            
 
           <p style={{marginTop: "2.6vh"}}>
             <b>Already have an Account ?? Login here <a href="./login" className="quick-link-reg"> ➔</a></b>
